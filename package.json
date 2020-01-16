@@ -2,7 +2,7 @@
   "name": "outdoors",
   "version": "1.0.0",
   "description": "landing page for outdoors",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
     "start": "server.js"
