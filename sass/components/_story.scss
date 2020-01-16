@@ -6,6 +6,7 @@
   padding: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+  background: rgba($color-white, 0.6);
 
   &__shape {
     width: 15rem;
@@ -16,13 +17,40 @@
     -webkit-cilp-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    position: relative;
   }
 
   &__img {
     height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all 0.5s;
   }
 
   &__text {
     transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.7rem;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(4px) brightness(80%);
   }
 }
